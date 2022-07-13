@@ -1,38 +1,406 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+html,
+body {
+  margin: 0;
+  overflow-x: hidden;
+  width: 100%;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+header {
+  width: 100%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  display: flex;
+  flex-direction: row;
+  color: #f5f3f4;
+  background-color: #660708;
+  align-items: center;
+  gap: 33.5rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+}
+
+.navbar {
+  padding: 7px;
+  background: #a4161a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.hero {
+  padding: 30px;
+  text-align: right;
+  height: 30vh;
+  color: white;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5331632653061225) 65%, #660708 100%);
+}
+
+.hero h3 {
+  font-size: 40px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.hero small {
+  font-size: 14px;
+  font-style: italic;
 }
 
-@keyframes App-logo-spin {
-  from {
+.hero p {
+  font-size: 22px;
+  font-style: italic;
+}
+
+.home_h2 {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 17px;
+  font-style: italic;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 14px;
+}
+
+.hero-cover {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 40vh;
+  background: url(./assets/covid.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  color: white;
+}
+
+.icons {
+  margin-top: 0.4rem;
+  margin-right: 0.5rem;
+  display: flex;
+  gap: 0.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.arrow-class {
+  margin-top: 2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 0;
+  color: white;
+  margin-right: 0.7rem;
+}
+
+.home-banner {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f3f4;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 0.1rem;
+}
+
+.world-map {
+  color: #f5f3f4;
+  position: relative;
+  font-size: 2.4rem;
+  padding-right: 0;
+  margin-bottom: 4rem;
+  left: 0.3rem;
+  margin-right: 1rem;
+}
+
+.place {
+  font-weight: 700;
+}
+
+.banner-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #f5f3f4;
+}
+
+.banner-text {
+  color: white;
+}
+
+.map-unique {
+  position: relative;
+  left: 1rem;
+  bottom: 1.1rem;
+  color: #a4161a;
+  font-size: 4.1rem;
+}
+
+.main-container {
+  display: flex;
+  padding: 0.3rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.search-container {
+  font-size: 1.5rem;
+  color: #660708;
+  margin-left: 2rem;
+}
+
+input {
+  border: 1px solid #660708;
+  border-radius: 1rem;
+  margin-right: 3rem;
+  height: 2.5rem;
+  width: 100%;
+  font-size: 0.9rem;
+  text-align: center;
+  background-color: white;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #660708;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #660708;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+
+  100% {
     transform: rotate(360deg);
+  }
+}
+
+.categories-container {
+  width: 100%;
+  text-align: center;
+  background-color: #660708;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+
+.countries-list {
+  width: 100%;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 20rem;
+  background-color: #660708;
+}
+
+.country-img {
+  position: relative;
+  width: 43%;
+  margin-left: 1rem;
+  bottom: 1.8rem;
+}
+
+.country-info {
+  color: white;
+  text-decoration: none;
+  width: 11rem;
+  padding-top: 0.3rem;
+}
+
+.right-arrow {
+  position: relative;
+  left: 86%;
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.info {
+  position: relative;
+  left: 50%;
+  width: 30%;
+  bottom: 0.7rem;
+}
+
+.country-capital {
+  width: 180%;
+}
+
+.card-country {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 10rem;
+  /* background-color: #232122; */
+  padding-top: 0.5rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.details-flag {
+  margin-top: 2rem;
+  width: 20%;
+  margin-left: 30rem;
+  margin-bottom: 2rem;
+}
+
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.detail-container p {
+  width: 100%;
+  padding: 1.5rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: white;
+}
+
+.detail-container p:nth-child(2n-1) {
+  background: #660708;
+}
+
+.detail-container p:nth-child(2n) {
+  background: #f5f3f4;
+  color: #660708;
+}
+
+@media (max-width: 481px) {
+  header {
+    gap: 5.1rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .icons {
+    margin-top: 0.4rem;
+    margin-right: 0.5rem;
+    display: flex;
+    gap: 0.25rem;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  .arrow-class {
+    margin-top: 2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 0;
+    color: white;
+    margin-right: 0.7rem;
+  }
+
+  .home-banner {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f3f4;
+    padding-top: 0.1rem;
+  }
+
+  .world-map {
+    color: #f5f3f4;
+    position: relative;
+    font-size: 2.4rem;
+    padding-right: 0;
+    margin-bottom: 4rem;
+    left: 0.3rem;
+    margin-right: 1rem;
+  }
+
+  .map-unique {
+    position: relative;
+    left: 0.4rem;
+    top: 0.95rem;
+    bottom: 0;
+    color: #a4161a;
+    font-size: 4.1rem;
+  }
+
+  .main-container {
+    display: flex;
+    padding: 0.3rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+  }
+
+  .countries-list {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .categories-container {
+    width: 100%;
+    text-align: center;
+    background-color: #660708;
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 0.2rem;
+    margin-top: 1rem;
+  }
+
+  .details-flag {
+    margin-top: 2rem;
+    width: 40%;
+    margin-left: 7rem;
+    margin-bottom: 2rem;
   }
 }

@@ -6,7 +6,7 @@ const Hero = () => (
     <div className="hero">
       <h3>COVID-19</h3>
       <small>Modern Day Most Strong Pandemic</small>
-      <p>&quot;You can stop the spread by wearing you nose mask!!!&quot;</p>
+      <p>&quot;You can stop the spread by wearing your nose mask!!!&quot;</p>
     </div>
   </section>
 );

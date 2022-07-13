@@ -7,6 +7,7 @@ import {
 import Home from './components/pages/Home';
 import Navbar from './components/Navbar';
 import Details from './components/pages/Details';
+import './App.css';
 
 const App = () => (
   <>

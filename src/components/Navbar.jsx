@@ -6,7 +6,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="header">
+    <div className="navbar">
       {
         window.location.pathname === '/'
           ? (
