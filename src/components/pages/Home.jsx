@@ -35,7 +35,7 @@ const Home = () => {
         <span className="search-container">
           <FiSearch />
         </span>
-        <input placeholder="search country..." onChange={(e) => searchCountry(e.target.value)} />
+        <input placeholder="locate your country..." onChange={(e) => searchCountry(e.target.value)} />
       </div>
       {loading && <Spinner />}
       <div className="countries-container">
@@ -77,6 +77,9 @@ const Home = () => {
           }
         </ul>
       </div>
+      <footer>
+        <p>&copy; 2022 BASH | COVID-19 Tracker</p>
+      </footer>
     </section>
   );
 };

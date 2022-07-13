@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders properly 1`] = `
+<section
+  className="body"
+>
+  <section
+    className="header-cover"
+  >
+    <div
+      className="hero-cover"
+    />
+    <div
+      className="hero"
+    >
+      <h3>
+        COVID-19
+      </h3>
+      <small>
+        Modern Day Most Strong Pandemic
+      </small>
+      <p>
+        "You can stop the spread by wearing your nose mask!!!"
+      </p>
+    </div>
+  </section>
+  <div
+    className="main-container"
+  >
+    <span
+      className="search-container"
+    >
+      <svg
+        fill="none"
+        height="1em"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="11"
+          cy="11"
+          r="8"
+        />
+        <line
+          x1="21"
+          x2="16.65"
+          y1="21"
+          y2="16.65"
+        />
+      </svg>
+    </span>
+    <input
+      onChange={[Function]}
+      placeholder="locate your country..."
+    />
+  </div>
+  <div
+    className="countries-container"
+  >
+    <ul
+      className="countries-list"
+    />
+  </div>
+  <footer>
+    <p>
+      © 2022 BASH | COVID-19 Tracker
+    </p>
+  </footer>
+</section>
+`;

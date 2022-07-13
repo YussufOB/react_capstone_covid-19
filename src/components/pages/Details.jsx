@@ -68,6 +68,9 @@ const Details = () => {
           {deaths}
         </p>
       </div>
+      <footer>
+        <p>&copy; 2022 BASH | COVID-19 Tracker</p>
+      </footer>
     </div>
   );
 };
