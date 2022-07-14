@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Hero = () => (
-  <section className="header-cover">
+  <section>
     <div className="hero-cover" />
     <div className="hero">
       <h3>COVID-19</h3>

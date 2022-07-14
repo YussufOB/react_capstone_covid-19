@@ -13,58 +13,63 @@ const Home = () => {
   }, []);
 
   const countriesData = useSelector((state) => state.countriesData);
+  const loading = useSelector((state) => state.loader);
   const filteredCountriesData = countriesData.filter((data) => (data.continent === 'Africa'));
   const [postCountry, setCountry] = useState('');
   const searchCountry = (country) => setCountry(country);
 
   return (
-    <>
+    <section className="body">
       <Hero />
-      <section>
+      <div className="main-container">
         <div className="search">
-          <FiSearch />
           <input placeholder="search country..." onChange={(e) => searchCountry(e.target.value)} />
+          <FiSearch className="search_icon" />
         </div>
-        <div className="data_display">
-          <ul className="country_list">
+        {loading && <div className="loader">.</div>}
+        <div className="countries-container">
+          <ul className="countries-list">
             {
-              filteredCountriesData.filter((value) => value.name
-                .toLowerCase().includes(postCountry
-                  .toLocaleLowerCase())).map((data) => (
-                    <Link
-                      to={`/details/${data.name}`}
-                      key={data.name}
-                      state={data.country === null ? ''
-                        : {
-                          country: data.name,
-                          flag: data.flag,
-                          cases: data.cases,
-                          tests: data.tests,
-                          recovered: data.recovered,
-                          active: data.active,
-                          critical: data.critical,
-                          testPerPeople: data.testPerPeople,
-                          casePerPeople: data.casePerPeople,
-                          deathPerPeople: data.deathPerPeople,
-                          deaths: data.deaths,
-                          population: data.population,
-                        }}
-                    >
-                      <div>
-                        <div><BsArrowRightCircle /></div>
-                        <img src={data.flag} alt={data.country} />
-                        <div>
-                          <p>{data.name}</p>
-                          <p>{data.cases}</p>
-                        </div>
-                      </div>
-                    </Link>
-              ))
+              filteredCountriesData.filter((value) => value.name.toLowerCase()
+                .includes(postCountry.toLocaleLowerCase()))
+                .map((data) => (
+                  <Link
+                    to={`/details/${data.name}`}
+                    key={data.name}
+                    className="card-country"
+                    state={data.country === null ? ''
+                      : {
+                        country: data.name,
+                        flag: data.flag,
+                        cases: data.cases,
+                        tests: data.tests,
+                        recovered: data.recovered,
+                        active: data.active,
+                        critical: data.critical,
+                        testPerPeople: data.testPerPeople,
+                        casePerPeople: data.casePerPeople,
+                        deathPerPeople: data.deathPerPeople,
+                        deaths: data.deaths,
+                        population: data.population,
+                      }}
+                  >
+                    <div className="country-info">
+                      <div className="right-arrow"><BsArrowRightCircle /></div>
+                      <img src={data.flag} alt={data.name} />
+                    </div>
+                    <div className="info">
+                      <h3>{data.name}</h3>
+                      <p>{data.cases}</p>
+                    </div>
+                  </Link>
+                ))
             }
           </ul>
         </div>
-      </section>
-    </>
+
+      </div>
+
+    </section>
   );
 };
 
