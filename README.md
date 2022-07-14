@@ -6,8 +6,11 @@ Covid-19 Tracker is a mobile web application showcasing the covid-19 statistics 
 ![alt text](./src/assets/Screenshot%20(31).png)
 ![alt text](./src/assets/Screenshot%20(32).png)
 
+# Presentation
+[Presentation](https://drive.google.com/file/d/1oGRlZMMM9VqO8jNUxDoHlf1pAqN6XN_H/view?usp=sharing)
+
 # Live Demo
-[Live Demo](https:///)
+[Live Demo](https://sensational-sopapillas-5203a6.netlify.app/)
 
 ## Built With 🔨
 - Basic CSS 
